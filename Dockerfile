@@ -17,6 +17,4 @@ ENV MONGODB_APPLICATION_PASS "kaya80ate"
 ADD run.sh /run.sh
 ADD set_mongodb_password.sh /set_mongodb_password.sh
 
-EXPOSE 27017
-# RUN ["/bin/bash", "-c", "mkdir /tachikoma"]
 CMD ["/run.sh"]

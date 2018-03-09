@@ -66,7 +66,7 @@ while [[ $RESULT -ne 0 ]]; do
         echo $COMMENT_LINE
         mongo admin -u $MONGODB_ADMIN_USER -p $MONGODB_ADMIN_PASS << EOF
 use $MONGODB_APPLICATION_DATABASE
-db.createUser({user: '$MONGODB_APPLICATION_USER', pwd: '$MONGODB_APPLICATION_PASS', roles:[{role:'dbOwner', db:'$MONGODB_APPLICATION_DATABASE'}, {role:'dbOwner', db:'admin'}, {role:'restore', db:'admin'}]})
+db.createUser({user: '$MONGODB_APPLICATION_USER', pwd: '$MONGODB_APPLICATION_PASS', roles:[{role:'dbOwner', db:'$MONGODB_APPLICATION_DATABASE'}, {role:'dbOwner', db:'admin'}]})
 EOF
 
         APP_USER_EXISTS=$?;
